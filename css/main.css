@@ -90,7 +90,9 @@ h1, h2, h3, h4, .font-heading {
 .text-gold-gradient {
   background: var(--gold-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   background-size: 200% auto;
   animation: goldShimmerText 4s linear infinite;
 }

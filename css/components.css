@@ -629,7 +629,8 @@
   z-index: 900;
   background: rgba(10, 13, 20, 0.85);
   backdrop-filter: blur(16px);
-  border-y: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
   padding: 1rem 0;
   margin-bottom: 4rem;
 }
