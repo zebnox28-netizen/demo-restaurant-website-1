@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Reservation | LUMIÈRE Prime Steakhouse New York</title>
+  <meta name="description" content="Book your dining table online at Lumière Steakhouse & Bistro Manhattan. Instant VIP reservation confirmation pass.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">L</div>
+        <div class="brand-name">
+          LUMIÈRE
+          <span>NEW YORK</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About Us</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="reservation.html" class="nav-link active">Reservation</a></li>
+        <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="status-pill" id="liveStatusPill">
+          <span class="status-dot"></span>
+          <span id="liveStatusText">Open Now • EST</span>
+        </div>
+
+        <button class="cart-icon-btn" id="openCartBtn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="reservation.html" class="btn btn-gold">
+          <i class="fa-regular fa-calendar-check"></i> Book Table
+        </a>
+
+        <button class="mobile-toggle" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       2. PAGE BANNER HERO
+       ========================================== -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="hero-tag" style="margin-bottom: 1rem;">
+        <i class="fa-solid fa-crown text-gold-gradient"></i> VIP Dining Experience
+      </div>
+      <h1 class="page-banner-title">Table <span class="text-gold-gradient">Reservation</span></h1>
+      <p class="page-banner-desc">Reserve your dining table online in seconds and receive an instant digital VIP Pass confirmation ticket.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. 4-STEP RESERVATION ENGINE
+       ========================================== -->
+  <section class="section-padding booking-section">
+    <div class="container">
+      
+      <div class="booking-card-wrapper">
+        <!-- Steps Bar -->
+        <div class="booking-steps-bar">
+          <div class="step-item active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-label">Party & Date</div>
+          </div>
+          <div class="step-item" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-label">Seating Preference</div>
+          </div>
+          <div class="step-item" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-label">Guest Info</div>
+          </div>
+          <div class="step-item" data-step="4">
+            <div class="step-number">4</div>
+            <div class="step-label">Confirmation</div>
+          </div>
+        </div>
+
+        <!-- Form Panes -->
+        <form id="reservationForm">
+          <!-- Step 1 Content -->
+          <div class="booking-step-pane active" id="stepPane1">
+            <div class="form-group-grid">
+              <div class="form-control-wrap">
+                <label><i class="fa-solid fa-user-group text-gold-gradient"></i> Guests Count</label>
+                <select class="form-input" id="formGuests">
+                  <option value="1">1 Person (Solo Dining)</option>
+                  <option value="2" selected>2 Guests (Romantic Dinner)</option>
+                  <option value="4">4 Guests (Family/Business)</option>
+                  <option value="6">6 Guests (Party)</option>
+                  <option value="10">10+ Guests (Private Suite)</option>
+                </select>
+              </div>
+
+              <div class="form-control-wrap">
+                <label><i class="fa-regular fa-calendar-days text-gold-gradient"></i> Reservation Date</label>
+                <input type="date" class="form-input" id="formDate" required>
+              </div>
+
+              <div class="form-control-wrap">
+                <label><i class="fa-regular fa-clock text-gold-gradient"></i> Preferred Time</label>
+                <select class="form-input" id="formTime">
+                  <option value="17:00">05:00 PM (Early Dinner)</option>
+                  <option value="18:30">06:30 PM (Dinner)</option>
+                  <option value="20:00" selected>08:00 PM (Prime Time - Popular)</option>
+                  <option value="21:30">09:30 PM (Late Supper)</option>
+                </select>
+              </div>
+
+              <div class="form-control-wrap">
+                <label><i class="fa-solid fa-cake-candles text-gold-gradient"></i> Special Occasion</label>
+                <select class="form-input" id="formOccasion">
+                  <option value="Casual Dining">Casual Dining</option>
+                  <option value="Birthday">Birthday Celebration</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Business Meeting">Business Dinner</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="text-align: right;">
+              <button type="button" class="btn btn-gold" onclick="nextBookingStep(2)">
+                Continue to Seating <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 Content -->
+          <div class="booking-step-pane" id="stepPane2" style="display: none;">
+            <label style="font-size: 1rem; color: var(--gold-primary); margin-bottom: 1rem; display: block;">Select Your Ambiance & Seating Preference:</label>
+            
+            <div class="seating-options-grid" style="margin-bottom: 2rem;">
+              <div class="seating-option-card selected" onclick="selectSeating(this, 'Main Dining Room')">
+                <i class="fa-solid fa-building-columns"></i>
+                <h4 style="color: var(--text-primary); margin-bottom: 4px;">Main Dining Room</h4>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Grand chandelier ambient lighting with view of open dry-aging vault.</p>
+              </div>
+
+              <div class="seating-option-card" onclick="selectSeating(this, 'Outdoor Heated Patio')">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <h4 style="color: var(--text-primary); margin-bottom: 4px;">Outdoor Heated Patio</h4>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Fifth Avenue NYC street view with cozy outdoor gas fireplaces.</p>
+              </div>
+
+              <div class="seating-option-card" onclick="selectSeating(this, 'Chef\'s Private Counter')">
+                <i class="fa-solid fa-kitchen-set"></i>
+                <h4 style="color: var(--text-primary); margin-bottom: 4px;">Chef's Counter</h4>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Front-row seat watching Executive Chef cook over live oak charcoals.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between;">
+              <button type="button" class="btn btn-outline" onclick="nextBookingStep(1)">
+                <i class="fa-solid fa-chevron-left"></i> Back
+              </button>
+              <button type="button" class="btn btn-gold" onclick="nextBookingStep(3)">
+                Enter Guest Details <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 Content -->
+          <div class="booking-step-pane" id="stepPane3" style="display: none;">
+            <div class="form-group-grid">
+              <div class="form-control-wrap">
+                <label>Full Name *</label>
+                <input type="text" class="form-input" id="formName" placeholder="e.g. Alexander Wright" required>
+              </div>
+
+              <div class="form-control-wrap">
+                <label>Email Address *</label>
+                <input type="email" class="form-input" id="formEmail" placeholder="alexander@example.com" required>
+              </div>
+
+              <div class="form-control-wrap">
+                <label>US Phone Number *</label>
+                <input type="tel" class="form-input" id="formPhone" placeholder="+1 (555) 019-2834" required>
+              </div>
+
+              <div class="form-control-wrap">
+                <label>Dietary Restrictions / Requests</label>
+                <input type="text" class="form-input" id="formNotes" placeholder="e.g., Nut allergy, quiet corner table">
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between;">
+              <button type="button" class="btn btn-outline" onclick="nextBookingStep(2)">
+                <i class="fa-solid fa-chevron-left"></i> Back
+              </button>
+              <button type="submit" class="btn btn-gold" id="confirmBookingBtn">
+                <i class="fa-solid fa-check-circle"></i> Confirm Reservation
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4 Content (Virtual VIP Pass Ticket) -->
+          <div class="booking-step-pane" id="stepPane4" style="display: none; text-align: center;">
+            <div style="width: 70px; height: 70px; background: rgba(46, 196, 182, 0.15); border: 2px solid var(--success-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; color: var(--success-color); font-size: 2rem;">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            
+            <h3 style="font-size: 2rem; color: var(--gold-primary); margin-bottom: 0.5rem;">Reservation Confirmed!</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Your VIP dining pass has been generated. A confirmation email & SMS reminder has been sent.</p>
+
+            <div id="virtualPassTicket" style="background: var(--bg-tertiary); border: 1px dashed var(--gold-primary); border-radius: var(--radius-md); padding: 2rem; text-align: left; max-width: 480px; margin: 0 auto 2rem auto; position: relative;">
+              <!-- Ticket Details -->
+            </div>
+
+            <button type="button" class="btn btn-outline" onclick="resetReservationForm()">
+              <i class="fa-solid fa-rotate"></i> Make Another Booking
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. CART DRAWER & OVERLAYS
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-gold-gradient"></i> Your Food Bag</h3>
+      <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-body" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="cart-summary-line"><span>NYC Sales Tax (8.875%)</span><span id="cartTax">$0.00</span></div>
+      <div class="cart-summary-line total"><span>Total Price</span><span id="cartTotal" class="text-gold-gradient">$0.00</span></div>
+      <button class="btn btn-gold" id="checkoutBtn" style="width: 100%; margin-top: 1.2rem;">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check text-gold-gradient" style="font-size: 1.4rem;"></i>
+    <span id="toastMsg">Action completed!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-symbol">L</div>
+            <div class="brand-name">LUMIÈRE <span>NEW YORK</span></div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7;">
+            Manhattan's premier destination for dry-aged USDA Prime Steaks, hand-crafted pastas, wood-fired pizza, and world-class wine pairings.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Lumière</a></li>
+            <li><a href="menu.html">Artisanal Menu</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours & Location</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot text-gold-gradient"></i> 742 Fifth Ave, New York, NY</p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;"><i class="fa-solid fa-phone text-gold-gradient"></i> +1 (212) 555-0198</p>
+        </div>
+        <div>
+          <h4>VIP Reservations</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem;">Reserve your table online for an unparalleled luxury dining experience.</p>
+          <a href="reservation.html" class="btn btn-gold"><i class="fa-regular fa-calendar-check"></i> Reserve Table</a>
+        </div>
+      </div>
+      <div style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 2rem; color: var(--text-muted); font-size: 0.85rem;">
+        © 2026 LUMIÈRE Prime Steakhouse & Artisanal Bistro. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

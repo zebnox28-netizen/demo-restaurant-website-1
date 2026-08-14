@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMIÈRE | Prime Steakhouse & Artisanal Bistro - New York</title>
+  <meta name="description" content="Experience award-winning dry-aged steaks, hand-crafted pasta, artisanal pizza, and fine wines at Lumière Manhattan. Book your dining table online today.">
+  <meta name="keywords" content="Steakhouse New York, Fine Dining NYC, Italian Restaurant Manhattan, Michelin Recommended Steakhouse, Luxury Dining">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. NAVIGATION BAR (SLIDES DOWN ON LOAD)
+       ========================================== -->
+  <nav class="navbar animate-nav-down" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="brand-symbol">L</div>
+        <div class="brand-name">
+          LUMIÈRE
+          <span>NEW YORK</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <div class="status-pill" id="liveStatusPill">
+          <span class="status-dot"></span>
+          <span id="liveStatusText">Open Now • EST</span>
+        </div>
+
+        <button class="cart-icon-btn" id="openCartBtn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="reservation.html" class="btn btn-gold" id="navBookBtn">
+          <i class="fa-regular fa-calendar-check"></i> Book Table
+        </a>
+
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       2. 3D ANIMATED HERO SECTION
+       ========================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      
+      <div class="hero-text-block">
+        <div class="hero-tag animate-hero-text delay-100">
+          <i class="fa-solid fa-star text-gold-gradient"></i> Michelin Guide 2026 Recommended
+        </div>
+        <h1 class="hero-title animate-hero-text delay-200">
+          Where Artisanal Flavor Meets <br>
+          <span class="text-gold-gradient">Unrivaled Luxury</span>
+        </h1>
+        <p class="hero-subtitle animate-hero-text delay-300">
+          Indulge in 45-day dry-aged USDA Prime Steaks, hand-rolled black truffle pastas, wood-fired sourdough pizzas, and rare sommelier reserve wines in the heart of Manhattan.
+        </p>
+
+        <div class="hero-btns animate-hero-text delay-400">
+          <a href="reservation.html" class="btn btn-gold">
+            <i class="fa-solid fa-utensils"></i> Reserve Your Table
+          </a>
+          <a href="menu.html" class="btn btn-outline">
+            <i class="fa-solid fa-book-open"></i> Explore 3D Menu Page
+          </a>
+        </div>
+
+        <div class="hero-badges animate-hero-text delay-500">
+          <div class="badge-item">
+            <i class="fa-solid fa-award badge-icon"></i>
+            <div class="badge-text">
+              <strong>4.9 ★ Rating</strong>
+              <span>5,000+ Google Reviews</span>
+            </div>
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-wine-glass-stripe badge-icon"></i>
+            <div class="badge-text">
+              <strong>500+ Fine Wines</strong>
+              <span>Sommelier Curated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card with Interactive 3D Perspective -->
+      <div class="hero-visual">
+        <div class="hero-img-frame card-3d-frame animate-hero-3d-card" id="heroCard3D">
+          <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1000&auto=format&fit=crop" alt="USDA Prime Tomahawk Steak" class="hero-img">
+          
+          <div class="floating-badge-card animate-float-3d">
+            <i class="fa-solid fa-crown text-gold-gradient" style="font-size: 1.8rem;"></i>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Chef's Special</span>
+              <h4 style="font-size: 1rem; color: var(--text-primary);">Dry-Aged Tomahawk</h4>
+              <div class="dish-price">$145</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. QUICK BOOKING BAR (STRIP)
+       ========================================== -->
+  <div class="container quick-booking-bar reveal-on-scroll">
+    <div class="booking-strip">
+      <div class="booking-field">
+        <label><i class="fa-solid fa-users"></i> Party Size</label>
+        <select id="quickGuests">
+          <option value="2">2 Guests (Romantic)</option>
+          <option value="4" selected>4 Guests (Family/Friends)</option>
+          <option value="6">6 Guests (Party)</option>
+          <option value="8">8+ Guests (VIP Table)</option>
+        </select>
+      </div>
+
+      <div class="booking-field">
+        <label><i class="fa-regular fa-calendar"></i> Date</label>
+        <input type="date" id="quickDate">
+      </div>
+
+      <div class="booking-field">
+        <label><i class="fa-regular fa-clock"></i> Time Slot</label>
+        <select id="quickTime">
+          <option value="18:00">06:00 PM (Dinner)</option>
+          <option value="19:30" selected>07:30 PM (Prime Time)</option>
+          <option value="21:00">09:00 PM (Late Night)</option>
+        </select>
+      </div>
+
+      <div class="booking-field">
+        <label><i class="fa-solid fa-chair"></i> Seating Area</label>
+        <select id="quickArea">
+          <option value="Main Dining">Main Dining Room</option>
+          <option value="Patio">Outdoor Heated Patio</option>
+          <option value="Private Dining">Private VIP Suite</option>
+        </select>
+      </div>
+
+      <a href="reservation.html" class="btn btn-gold">
+        Find Table <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       4. ABOUT & EXPERIENCE SECTION
+       ========================================== -->
+  <section class="section-padding reveal-on-scroll" id="about">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div class="card-3d-frame">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop" alt="Lumiere Interior Ambiance" style="border-radius: var(--radius-lg); object-fit: cover; width: 100%;">
+      </div>
+
+      <div>
+        <div class="section-subtitle" style="justify-content: flex-start;">Since 1998 • Manhattan, NY</div>
+        <h2 class="section-title">Crafting Unforgettable Culinary Journeys</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.8;">
+          At <strong style="color: var(--gold-primary);">LUMIÈRE</strong>, we elevate fine dining to an art form. Our master butchers hand-select 100% USDA Prime Black Angus beef, dry-aged in our proprietary Himalayan salt tile chamber for up to 45 days.
+        </p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.8;">
+          Pair your steak with our signature wood-fired sourdough pizzas, fresh black truffle pastas hand-rolled daily, and an extensive collection of rare vintages carefully curated by Master Sommelier Julian Vance.
+        </p>
+
+        <div style="display: flex; gap: 2.5rem; margin-bottom: 2.5rem;">
+          <div>
+            <span style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--gold-primary); font-weight: 700; display: block;">28+</span>
+            <span style="color: var(--text-muted); font-size: 0.9rem;">Years of Excellence</span>
+          </div>
+          <div>
+            <span style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--gold-primary); font-weight: 700; display: block;">150k+</span>
+            <span style="color: var(--text-muted); font-size: 0.9rem;">Steaks Served</span>
+          </div>
+          <div>
+            <span style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--gold-primary); font-weight: 700; display: block;">100%</span>
+            <span style="color: var(--text-muted); font-size: 0.9rem;">Organic Ingredients</span>
+          </div>
+        </div>
+
+        <a href="menu.html" class="btn btn-outline">Explore Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       5. CHEF HIGHLIGHTS PREVIEW SECTION
+       ========================================== -->
+  <section class="section-padding reveal-on-scroll" style="background: var(--bg-secondary); border-y: 1px solid rgba(255, 255, 255, 0.05);">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-subtitle">Chef's Selection</div>
+        <h2 class="section-title">Culinary Signature Highlights</h2>
+        <p class="section-desc">Experience a taste of our masterfully crafted 3D menu catalog.</p>
+      </div>
+
+      <div class="dishes-grid" id="dishesGrid">
+        <!-- Rendered dynamically by JavaScript preview -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="menu.html" class="btn btn-gold" style="padding: 1rem 2.5rem; font-size: 1rem;">
+          <i class="fa-solid fa-book-open"></i> Open Full 3D Menu Page <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. HAPPY HOURS & SPECIAL PROMO
+       ========================================== -->
+  <section class="section-padding happy-hour-section reveal-on-scroll" id="happy-hour">
+    <div class="container">
+      <div class="happy-hour-grid">
+        <div>
+          <div class="happy-hour-tag">Wednesdays & Thursdays • 4 PM - 7 PM EST</div>
+          <h2 class="happy-hour-title">Happy Hours & Reserve Wine Special</h2>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+            Enjoy 50% off select reserve bottles of Napa Cabernet and Tuscan Chianti, paired with complementary black truffle parmesan fries and mini wagyu sliders.
+          </p>
+
+          <div class="countdown-box" id="happyCountdown">
+            <div class="time-unit">
+              <span class="time-number" id="cdHours">03</span>
+              <span class="time-label">Hours</span>
+            </div>
+            <div class="time-unit">
+              <span class="time-number" id="cdMinutes">42</span>
+              <span class="time-label">Minutes</span>
+            </div>
+            <div class="time-unit">
+              <span class="time-number" id="cdSeconds">18</span>
+              <span class="time-label">Seconds</span>
+            </div>
+          </div>
+
+          <a href="reservation.html" class="btn btn-crimson">
+            <i class="fa-solid fa-glass-cheers"></i> Claim Happy Hour Table
+          </a>
+        </div>
+
+        <div class="card-3d-frame">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1000&auto=format&fit=crop" alt="Wine Tasting Happy Hour" style="border-radius: var(--radius-lg); object-fit: cover; width: 100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. REVIEWS & TESTIMONIALS
+       ========================================== -->
+  <section class="section-padding reveal-on-scroll" id="reviews" style="background: var(--bg-secondary);">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-subtitle">Diner Satisfaction</div>
+        <h2 class="section-title">Words From Our Guests</h2>
+        <p class="section-desc">Over 5,000+ satisfied diners on Google & OpenTable praise Lumière's world-class cuisine.</p>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. CART SIDE DRAWER
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-gold-gradient"></i> Your Food Bag</h3>
+      <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-body" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="cart-summary-line"><span>NYC Sales Tax (8.875%)</span><span id="cartTax">$0.00</span></div>
+      <div class="cart-summary-line total"><span>Total Price</span><span id="cartTotal" class="text-gold-gradient">$0.00</span></div>
+
+      <button class="btn btn-gold" id="checkoutBtn" style="width: 100%; margin-top: 1.2rem;">
+        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check text-gold-gradient" style="font-size: 1.4rem;"></i>
+    <span id="toastMsg">Item added to your order!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-symbol">L</div>
+            <div class="brand-name">LUMIÈRE <span>NEW YORK</span></div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.7;">
+            Manhattan's premier destination for dry-aged USDA Prime Steaks, hand-crafted pastas, wood-fired pizza, and world-class wine pairings.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Lumière</a></li>
+            <li><a href="menu.html">Artisanal Menu</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Hours & Location</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-location-dot text-gold-gradient"></i> 742 Fifth Ave, New York, NY
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            <i class="fa-solid fa-phone text-gold-gradient"></i> +1 (212) 555-0198
+          </p>
+        </div>
+
+        <div>
+          <h4>VIP Reservations</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem;">
+            Reserve your table online for an unparalleled luxury dining experience.
+          </p>
+          <a href="reservation.html" class="btn btn-gold">
+            <i class="fa-regular fa-calendar-check"></i> Book Table Online
+          </a>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 2rem; color: var(--text-muted); font-size: 0.85rem;">
+        © 2026 LUMIÈRE Prime Steakhouse & Artisanal Bistro. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

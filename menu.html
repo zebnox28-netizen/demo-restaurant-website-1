@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | LUMIÈRE Prime Steakhouse & Artisanal Bistro</title>
+  <meta name="description" content="Explore Lumière's full menu of USDA Prime Steaks, hand-rolled pastas, wood-fired pizzas, fine wines, and artisanal desserts in New York.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. NAVIGATION BAR
+       ========================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">L</div>
+        <div class="brand-name">
+          LUMIÈRE
+          <span>NEW YORK</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#about" class="nav-link">About Us</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="status-pill" id="liveStatusPill">
+          <span class="status-dot"></span>
+          <span id="liveStatusText">Open Now • EST</span>
+        </div>
+
+        <button class="cart-icon-btn" id="openCartBtn" aria-label="Open Shopping Bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <a href="reservation.html" class="btn btn-gold">
+          <i class="fa-regular fa-calendar-check"></i> Book Table
+        </a>
+
+        <button class="mobile-toggle" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       2. PAGE BANNER HERO
+       ========================================== -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="hero-tag" style="margin-bottom: 1rem;">
+        <i class="fa-solid fa-utensils text-gold-gradient"></i> Artisanal Culinary Catalog
+      </div>
+      <h1 class="page-banner-title">Our <span class="text-gold-gradient">Exquisite Menu</span></h1>
+      <p class="page-banner-desc">Every cut of beef, fresh strand of pasta, and wine pairing is selected with meticulous care to deliver an unforgettable dining experience.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. STICKY CATEGORY JUMP BAR
+       ========================================== -->
+  <div class="menu-jump-bar">
+    <div class="container jump-links-wrap">
+      <a href="#steaks" class="jump-btn active"><i class="fa-solid fa-drumstick-bite"></i> US Prime Steaks</a>
+      <a href="#pasta" class="jump-btn"><i class="fa-solid fa-bowl-food"></i> Handcrafted Pasta</a>
+      <a href="#pizza" class="jump-btn"><i class="fa-solid fa-pizza-slice"></i> Wood-Fired Pizza</a>
+      <a href="#cocktails" class="jump-btn"><i class="fa-solid fa-wine-glass"></i> Wines & Cocktails</a>
+      <a href="#desserts" class="jump-btn"><i class="fa-solid fa-cookie-bite"></i> Signature Desserts</a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       4. ALTERNATING 3D MENU SECTIONS
+       ========================================== -->
+  <div class="container" style="padding-bottom: 6rem;">
+
+    <!-- SECTION 1: US PRIME STEAKS -->
+    <section class="menu-category-section" id="steaks">
+      <div class="menu-alt-grid">
+        <!-- 3D Visual Card (Left) -->
+        <div class="menu-3d-visual">
+          <div class="card-3d-frame">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=1000&auto=format&fit=crop" alt="USDA Prime Ribeye" class="card-3d-img">
+            <div class="card-3d-overlay-badge">
+              <strong>45-Day Dry Aged</strong>
+              <span>White Oak Charcoal Grilled</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food List Column (Right) -->
+        <div class="menu-items-column">
+          <h2 class="category-header-title">US Prime Steaks</h2>
+          <div class="category-header-desc">USDA Prime Beef • Salt-Aged in Chamber</div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Dry-Aged Tomahawk Ribeye (32 oz)</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$145.00</div>
+            </div>
+            <p class="item-row-desc">45-day dry-aged USDA Prime Angus cooked over oak charcoal with bone marrow jus & rosemary butter.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with 2019 Opus One Cabernet</div>
+              <button class="item-row-btn" onclick="quickAddToCart('steak-01')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Filet Mignon Rossini</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$78.00</div>
+            </div>
+            <p class="item-row-desc">8oz Center-cut tenderloin topped with seared Foie Gras, black truffle reduction & wild chanterelles.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with 2020 Barolo DOCG</div>
+              <button class="item-row-btn" onclick="quickAddToCart('steak-02')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Smoked Wagyu Kansas City Strip</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$115.00</div>
+            </div>
+            <p class="item-row-desc">A5 Miyazaki Wagyu sirloin infused with hickory wood smoke & glazed with bourbon shallot butter.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with 2018 Silver Oak Cabernet</div>
+              <button class="item-row-btn" onclick="quickAddToCart('steak-03')">+ Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: HANDCRAFTED PASTA (REVERSE LAYOUT) -->
+    <section class="menu-category-section" id="pasta">
+      <div class="menu-alt-grid reverse">
+        <!-- 3D Visual Card (Right) -->
+        <div class="menu-3d-visual">
+          <div class="card-3d-frame">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1000&auto=format&fit=crop" alt="Black Truffle Tagliolini" class="card-3d-img">
+            <div class="card-3d-overlay-badge">
+              <strong>Hand-Rolled Daily</strong>
+              <span>Umbrian Black Truffles</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food List Column (Left) -->
+        <div class="menu-items-column">
+          <h2 class="category-header-title">Handcrafted Pasta</h2>
+          <div class="category-header-desc">Fresh Semolina & Free-Range Eggs</div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Black Truffle Tagliolini</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$38.00</div>
+            </div>
+            <p class="item-row-desc">Fresh egg pasta tossed in 36-month aged Parmigiano Reggiano crema & shaved Umbrian black truffles.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with Russian River Chardonnay</div>
+              <button class="item-row-btn" onclick="quickAddToCart('pasta-01')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Lobster & Saffron Fettuccine</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$46.00</div>
+            </div>
+            <p class="item-row-desc">Whole Maine lobster tail tossed with squid ink fettuccine, cherry tomatoes & Iranian saffron sauce.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with Sauvignon Blanc</div>
+              <button class="item-row-btn" onclick="quickAddToCart('pasta-02')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Tortellini Gorgonzola</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$28.50</div>
+            </div>
+            <p class="item-row-desc">Handmade spinach tortellini stuffed with sweet Gorgonzola cheese, toasted walnuts & fresh sage butter.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with Pinot Grigio</div>
+              <button class="item-row-btn" onclick="quickAddToCart('pasta-01')">+ Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: WOOD-FIRED PIZZA -->
+    <section class="menu-category-section" id="pizza">
+      <div class="menu-alt-grid">
+        <!-- 3D Visual Card (Left) -->
+        <div class="menu-3d-visual">
+          <div class="card-3d-frame">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop" alt="Artisanal Wood Fired Pizza" class="card-3d-img">
+            <div class="card-3d-overlay-badge">
+              <strong>72-Hour Sourdough</strong>
+              <span>San Marzano DOP Tomatoes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food List Column (Right) -->
+        <div class="menu-items-column">
+          <h2 class="category-header-title">Wood-Fired Artisanal Pizza</h2>
+          <div class="category-header-desc">Baked at 900°F in Brick Oven</div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Burrata & Tartufata Pizza</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$32.00</div>
+            </div>
+            <p class="item-row-desc">San Marzano tomato sauce, fresh creamy Burrata cheese, hot honey drizzle & fresh organic basil.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with Chianti Classico</div>
+              <button class="item-row-btn" onclick="quickAddToCart('pizza-01')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Smoked Prosciutto & Fig Pizza</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$29.50</div>
+            </div>
+            <p class="item-row-desc">Aged Prosciutto di Parma, caramelized mission figs, Gorgonzola dolce & wild arugula.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with Barbera d'Alba</div>
+              <button class="item-row-btn" onclick="quickAddToCart('pizza-01')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Spicy Calabrian Salami Pizza</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$27.00</div>
+            </div>
+            <p class="item-row-desc">Calabrian Soppressata salami, smoked provolone, chili honey glaze & roasted bell peppers.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-bottle text-gold-gradient"></i> Pair with Montepulciano</div>
+              <button class="item-row-btn" onclick="quickAddToCart('pizza-01')">+ Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FINE WINES & COCKTAILS (REVERSE LAYOUT) -->
+    <section class="menu-category-section" id="cocktails">
+      <div class="menu-alt-grid reverse">
+        <!-- 3D Visual Card (Right) -->
+        <div class="menu-3d-visual">
+          <div class="card-3d-frame">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop" alt="Signature Golden Manhattan" class="card-3d-img">
+            <div class="card-3d-overlay-badge">
+              <strong>Sommelier Curated</strong>
+              <span>24K Edible Gold Leaf</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food List Column (Left) -->
+        <div class="menu-items-column">
+          <h2 class="category-header-title">Wines & Craft Cocktails</h2>
+          <div class="category-header-desc">500+ Cellar Reserves & Handcrafted Mixes</div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">The Golden Manhattan</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$24.00</div>
+            </div>
+            <p class="item-row-desc">WhistlePig 10yr Rye, Vermouth, Angostura bitters, 24k edible gold leaf & Luxardo cherry.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-martini-glass-citrus text-gold-gradient"></i> Aperitif Cocktail</div>
+              <button class="item-row-btn" onclick="quickAddToCart('drink-01')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Dom Pérignon Vintage Champagne</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$65.00</div>
+            </div>
+            <p class="item-row-desc">Served by glass. Dynamic blend with notes of brioche, white peach & silky effervescence.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-glass text-gold-gradient"></i> Pairs with Oysters & Wagyu</div>
+              <button class="item-row-btn" onclick="quickAddToCart('drink-02')">+ Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: DESSERTS -->
+    <section class="menu-category-section" id="desserts">
+      <div class="menu-alt-grid">
+        <!-- 3D Visual Card (Left) -->
+        <div class="menu-3d-visual">
+          <div class="card-3d-frame">
+            <img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?q=80&w=1000&auto=format&fit=crop" alt="Valrhona Dark Chocolate Sphere" class="card-3d-img">
+            <div class="card-3d-overlay-badge">
+              <strong>Tableside Melt</strong>
+              <span>70% Grand Cru Dark Chocolate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food List Column (Right) -->
+        <div class="menu-items-column">
+          <h2 class="category-header-title">Signature Desserts</h2>
+          <div class="category-header-desc">Artisanal Sweets & Italian Gelato</div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Valrhona Dark Chocolate Sphere</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$22.00</div>
+            </div>
+            <p class="item-row-desc">Chocolate shell melted tableside with hot salted caramel, hazelnut crunch & vanilla gelato.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-glass-stripe text-gold-gradient"></i> Pair with 10yr Tawny Port</div>
+              <button class="item-row-btn" onclick="quickAddToCart('dessert-01')">+ Add to Bag</button>
+            </div>
+          </div>
+
+          <div class="menu-item-row">
+            <div class="item-row-top">
+              <div class="item-row-name">Smoked Sicilian Pistachio Tiramisu</div>
+              <div class="item-row-dots"></div>
+              <div class="item-row-price">$19.00</div>
+            </div>
+            <p class="item-row-desc">Espresso-soaked savoiardi layered with Bronte pistachio mascarpone mousse & cocoa nibs.</p>
+            <div class="item-row-actions">
+              <div class="item-pairing-note"><i class="fa-solid fa-wine-glass-stripe text-gold-gradient"></i> Pair with Moscato d'Asti</div>
+              <button class="item-row-btn" onclick="quickAddToCart('dessert-02')">+ Add to Bag</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==========================================
+       5. CART DRAWER & MODAL OVERLAYS
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping text-gold-gradient"></i> Your Food Bag</h3>
+      <button class="close-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-body" id="cartItemsList"></div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-line"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="cart-summary-line"><span>NYC Sales Tax (8.875%)</span><span id="cartTax">$0.00</span></div>
+      <div class="cart-summary-line total"><span>Total Price</span><span id="cartTotal" class="text-gold-gradient">$0.00</span></div>
+      <button class="btn btn-gold" id="checkoutBtn" style="width: 100%; margin-top: 1.2rem;">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check text-gold-gradient" style="font-size: 1.4rem;"></i>
+    <span id="toastMsg">Item added to your order!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 1.2rem;">
+            <div class="brand-symbol">L</div>
+            <div class="brand-name">LUMIÈRE <span>NEW YORK</span></div>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7;">
+            Manhattan's premier destination for dry-aged USDA Prime Steaks, hand-crafted pastas, wood-fired pizza, and world-class wine pairings.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Lumière</a></li>
+            <li><a href="menu.html">Artisanal Menu</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours & Location</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot text-gold-gradient"></i> 742 Fifth Ave, New York, NY</p>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;"><i class="fa-solid fa-phone text-gold-gradient"></i> +1 (212) 555-0198</p>
+        </div>
+        <div>
+          <h4>VIP Reservations</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem;">Reserve your table online for an unparalleled luxury dining experience.</p>
+          <a href="reservation.html" class="btn btn-gold"><i class="fa-regular fa-calendar-check"></i> Reserve Table</a>
+        </div>
+      </div>
+      <div style="text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 2rem; color: var(--text-muted); font-size: 0.85rem;">
+        © 2026 LUMIÈRE Prime Steakhouse & Artisanal Bistro. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
